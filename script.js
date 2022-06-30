@@ -9,16 +9,17 @@
 
 // Assignment code here
 
+// Generate Password with the character below
 
 function generatePassword() {
  var length = window.prompt("Password length should be between 8-128 characters")
   console.log(length)
 
   if (length <8) {
-    window.alert("Try again")
+    window.alert("Please try again")
 
   } else if (length>128) {
-    window.alert("Try again")
+    window.alert("Please try again")
   } else {
    var uppercase = window.confirm ("Would you like uppercase to be included in your password?")
    console.log(uppercase)
@@ -50,39 +51,40 @@ function generatePassword() {
   
   }
   
-   var generateBtn = document.querySelector("#generate");
-   function generate(){
 
-   }
-
-   function writePassword(){
-   //debugger;
-    var chars = "";
-    var passwordLength = 12;
-    passwordLength = parseInt(passwordLength);
-   // var password = generateBtn;
-    for (var i = 0; i <+ passwordLength; i++){
-      //var randomNumber= Math.floor() * chars.length);
-     // password += chars.substring(randomNumber, randomNumber +1);
-      console.log(randomNumber)
-      
-    }
-
-
-  }
-
-
-  // Assignment Code
-//var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
+var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Write password to the #password input
+ function writePassword() {
+  var correctPrompts = getPrompts(); // true or false
+
+  if(correctPrompts){
+    var password = generatePassword();
+  }  else {
+    passwordText = "";
+  }
+  
+  function generatePassword(){
+    // I would generatePassword based on the prommpts
+     var passwordLength = "";
+    for( var i = 0; i < generatePassword; i++){
+      var randomIndex =Math.floor(Math.random() * choosenstring);
+      password = password + choosenstring[randomIndex]
+  
+      return password;
+    }
+    
+  
+   }
+  var password = generatePassword();
+   var passwordText = document.querySelector("#password");
+   passwordText.value = password;
+  
+
+ function getPrompts(){
+  choosenstring = [];
+ }
+}
