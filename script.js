@@ -1,7 +1,13 @@
-// 1. Prompt the user for password criteria
+// Prompt the user for password criteria
 // password length 8-128
-//upper and lower case
+//upper and lower case symbols and character
 
+
+////////////////////////
+
+///////////////////////
+
+// Assignment code here
 
 
 function generatePassword() {
@@ -15,7 +21,7 @@ function generatePassword() {
     window.alert("Try again")
   } else {
    var uppercase = window.confirm ("Would you like uppercase to be included in your password?")
-   console.log(uppercase)}
+   console.log(uppercase)
 
    var lowercase = window.confirm("Would you like lowercase to be included in your password?")
    console.log(lowercase)
@@ -25,7 +31,7 @@ function generatePassword() {
    
    var number = window.confirm("Would you like numbers to be included in  your password?")
    console.log(number)
-
+  }
    var choosenstring = ""
    if (uppercase===true){
     choosenstring+= "ZXCVBNMLKJHGFDSAQWERTYUIOP"
@@ -39,54 +45,37 @@ function generatePassword() {
    }
    if (symbols===true){
     choosenstring+= "!@#$%^&*()_+"
+    console.log(choosenstring)
    }
-  console.log(choosenstring)
+  
+  }
+  
+   var generateBtn = document.querySelector("#generate");
+   function generate(){
 
+   }
 
-
-  function writePassword(){
+   function writePassword(){
+   //debugger;
     var chars = "";
     var passwordLength = 12;
-    var password = generateBtn;
-    for (var i = 0; i <+ length; i++){
-      var randomNumber= Math.floor(Math.floor() * chars.length);
-      password += chars.substring(randomNumber, randomNumber +1);
+    passwordLength = parseInt(passwordLength);
+   // var password = generateBtn;
+    for (var i = 0; i <+ passwordLength; i++){
+      //var randomNumber= Math.floor() * chars.length);
+     // password += chars.substring(randomNumber, randomNumber +1);
       console.log(randomNumber)
       
     }
-  }
-    function generateBtn(){
-    document.querySelector("#generate")
-    console.log(generateBtn)
+
+
   }
 
-    
-  
-    function addEventListener(){
-      generateBtn.addEventListener("click, writePassword");
-      console.log(click)
-    }
-    
-  
 
-}
-  
+  // Assignment Code
+//var generateBtn = document.querySelector("#generate");
 
-
-
-
-
-
-
-
-
-// Assignment code here
-
-
-// // Get references to the #generate element
-// var generateBtn = document.querySelector("#generate");
-
-// // Write password to the #password input
+// Write password to the #password input
 // function writePassword() {
 //   var password = generatePassword();
 //   var passwordText = document.querySelector("#password");
@@ -95,5 +84,5 @@ function generatePassword() {
 
 // }
 
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword)
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
