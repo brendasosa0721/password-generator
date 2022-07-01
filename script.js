@@ -10,6 +10,7 @@ generateBtn.addEventListener("click", writePassword);
  
 // Write password to the #password input
 function writePassword() {
+  debugger;
   var correctPrompts = confirm();
   var passwordText = document.querySelector("#password");
 
@@ -63,9 +64,9 @@ function generatePassword() {
     var password = "";
     for(var i = 0; i <length; i++) {
       var randomIndex = Math.floor(Math.random() * length);
-      newPassword = password + choosenstring[randomIndex];
+      password = password + choosenstring[randomIndex];
     }
-    return newPassword;
+    return password;
   }
 
 // // Write password to the #password input
